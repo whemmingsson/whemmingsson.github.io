@@ -1,0 +1,119 @@
+:root {
+    --game-size: 1000px;
+    --rows: 10;
+    --cols: 20;
+
+    /* CSS HEX */
+    --russian-violet: #441151ff;
+    --sweet-brown: #a63d40ff;
+    --gold-crayola: #e9b872ff;
+    --asparagus: #90a959ff;
+    --air-superiority-blue: #6494aaff;
+
+    --red-salsa: #f94144ff;
+    --orange-red: #f3722cff;
+    --yellow-orange-color-wheel: #f8961eff;
+    --mango-tango: #f9844aff;
+    --maize-crayola: #f9c74fff;
+    --pistachio: #90be6dff;
+    --zomp: #43aa8bff;
+    --cadet-blue: #4d908eff;
+    --queen-blue: #577590ff;
+    --cg-blue: #277da1ff;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .fa-bomb {
+      color: #c90000
+  }
+
+
+  body {
+      background: #111;
+      color: #eee;
+      font-family: 'Quicksand', sans-serif;
+  }
+
+  .container {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 1020px;
+  }
+
+  header, footer, main {
+      background:  #333;
+      padding: 10px;
+  }
+
+  main {
+      margin: 50px 0;  
+  }
+
+  .game, .row {
+      width:  var(--game-size);
+      display: flex;
+  }
+
+  .game {
+      flex-direction: column;
+  }
+
+  .row {
+      flex-direction: row;
+  }
+
+  .square {
+      color: #fff;
+      background: #111;
+      border: 1px solid #555;
+      height: calc(var(--game-size) / var(--cols));
+      width: calc(var(--game-size) / var(--cols));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .square:hover {
+      background: #888;
+      cursor: pointer;
+  }
+
+  .square[data-n='1'] {
+    background: var(--cg-blue);  
+  }
+
+  .square[data-n='2'] {
+    background: var(--queen-blue);  
+  }
+
+  .square[data-n='3'] {
+    background: var(--cadet-blue);  
+  }
+
+  .square[data-n='4'] {
+    background: var(--zomp);  
+  }
+
+  .square[data-n='5'] {
+    background: var(--pistachio);  
+  }
+
+  .square[data-n='6'] {
+      color:#000;
+    background: var(--maize-crayola);  
+  }
+
+  .square[data-n='7'] {
+    color:#000;
+  background: var(--mango-tango);  
+}
+
+.square[data-n='8'] {
+    color:#000;
+  background: var(--orange-red);  
+}
